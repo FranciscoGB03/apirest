@@ -22,6 +22,9 @@ public class PokemonControllerImpl implements PokemonController {
         String url = "https://pokeapi.co/api/v2/pokemon/ditto";
         Pokemon pokemon = restTemplate.getForObject(url, Pokemon.class);
         return pokemon;
+        // Otra alternativa con Object
+        // Object object=restTemplate.getForObject(url, Object.class);
+        // return object;
     }
 
 }
