@@ -10,12 +10,8 @@ import com.pgonbo.apirest.models.Pokemon;
 @RestController
 public class PokemonControllerImpl implements PokemonController {
 
-    private final RestTemplate restTemplate;
-
     @Autowired
-    public PokemonControllerImpl(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }
+    private RestTemplate restTemplate;
 
     @Override
     public Pokemon getPokemon() {
@@ -26,5 +22,4 @@ public class PokemonControllerImpl implements PokemonController {
         // Object object=restTemplate.getForObject(url, Object.class);
         // return object;
     }
-
 }
